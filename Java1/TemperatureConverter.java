@@ -26,14 +26,15 @@ class TemperatureConverter {
 
 		System.out.print("Gib Celsius an: ");
 		this.celsius = scanner.nextFloat();
-		System.out.println("Du hast eingegeben: " + this.celsius);
+		System.out.println("Du hast eingegeben: " + getCelsius());
 	}
+
 
 	void inputFahrenheit() {
 
 		System.out.print("Gib Fahrenheit an: ");
 		this.fahrenheit = scanner.nextFloat();
-		System.out.println("Du hast eingegeben: " + this.fahrenheit);
+		System.out.println("Du hast eingegeben: " + getFahrenheit());
 	}
 
 	float getCelsius() {
