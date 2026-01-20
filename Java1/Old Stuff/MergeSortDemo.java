@@ -14,8 +14,4 @@ public class BubbleSortDemo {
 		num1 = num2;
 		num2 = t;
 	}
-
-	public static void bubbleSort() {
-		for (int i = )
-	}
 }
