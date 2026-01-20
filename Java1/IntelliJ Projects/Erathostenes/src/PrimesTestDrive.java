@@ -2,8 +2,16 @@ import java.util.Scanner;
 
 public class PrimesTestDrive {
     public static void main(String[] args) {
-        System.out.print("Max number: ");
         Scanner scanner = new Scanner(System.in);
-        Primes.findPrimes(scanner.nextInt());
+        System.out.print("Enter max number to find primes: ");
+        int n = scanner.nextInt();
+        Primes.findPrimes(n);
+
+        // Ausgabe aller Primzahlen
+        for (int i = 2; i < n; i++) {
+            if (Primes.isPrime[i]) {
+                System.out.print(i + " ");
+            }
+        }
     }
 }

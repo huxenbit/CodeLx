@@ -18,13 +18,6 @@ public class Primes {
                 isPrime[j] = false; // Vielfache von i sind keine Primzahlen
             }
         }
-        System.out.println();
-
-        // Ausgabe aller Primzahlen
-        for (int i = 2; i < n; i++) {
-            if (isPrime[i]) {
-                System.out.print(i + " ");
-            }
-        }
+        System.out.println("\n");
     }
 }
