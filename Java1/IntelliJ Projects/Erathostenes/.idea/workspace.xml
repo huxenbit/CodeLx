@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f614497e-7cac-40e5-8a6d-09b41e7ce854" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Erathostenes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimesTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe10/1/main/SpeedOfLight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe10/1/main/SpeedOfLight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe10/1/test/SpeedOfLightTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe10/1/test/SpeedOfLightTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/1/main/StringArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/1/main/StringArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/1/test/StringArrayTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/1/test/StringArrayTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/2/main/StringArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/2/main/StringArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/2/test/StringArrayListTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/2/test/StringArrayListTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/3/main/StringArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/3/main/StringArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/3/test/StringArrayListTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/3/test/StringArrayListTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/4/main/StringArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/4/main/StringArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/4/test/StringArrayListTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe5/4/test/StringArrayListTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/1/main/StringArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/1/main/StringArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/1/test/StringArrayTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/1/test/StringArrayTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/2/main/StringArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/2/main/StringArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/2/test/StringArrayListTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/2/test/StringArrayListTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/3/main/StringArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/3/main/StringArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/3/test/StringArrayListTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/3/test/StringArrayListTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/4/main/StringArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/4/main/StringArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/4/test/StringArrayListTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe6/4/test/StringArrayListTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/CreditCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/CreditCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/GooglePay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/GooglePay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/PayPal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/PayPal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/PaymentMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/main/PaymentMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/test/PaymentTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1.3/test/PaymentTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/CreditCard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/CreditCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/GooglePay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/GooglePay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/PayPal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/PayPal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/PaymentMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/main/PaymentMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/test/CreditCardTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/test/CreditCardTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/test/PayPalTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/test/PayPalTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/test/PaymentTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/1/test/PaymentTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/CelsiusToFahrenheitStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/CelsiusToFahrenheitStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/ConversionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/ConversionStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/FahrenheitToCelsiusStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/FahrenheitToCelsiusStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/KilometerToMilesStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/KilometerToMilesStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/MilesToKilometerStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/main/MilesToKilometerStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/test/ConversionTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe7/2/test/ConversionTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Canine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Canine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Dragon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Dragon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Feline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Feline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Lion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Lion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/RoboDog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/RoboDog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Robot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Wolf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/main/Wolf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/test/AnimalTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/1/test/AnimalTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/CelsiusToFahrenheitStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/CelsiusToFahrenheitStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/CelsiusToKelvinStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/CelsiusToKelvinStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/ConversionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/ConversionStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/FahrenheitToCelsiusStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/FahrenheitToCelsiusStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/KelvinToCelsiusStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/KelvinToCelsiusStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/KilometerToMilesStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/KilometerToMilesStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/MilesToKilometerStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/MilesToKilometerStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/TextInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/main/TextInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/test/ConversionTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe8/2/test/ConversionTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/1/main/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/1/main/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/1/main/ElectricCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/1/main/ElectricCar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/1/test/CarTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/1/test/CarTestDrive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Canine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Canine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Dragon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Dragon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Feline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Feline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Lion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Lion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/RoboDog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/RoboDog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Robot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Wolf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/main/Wolf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/test/AnimalTestDrive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prog1/Aufgabe9/2/test/AnimalTestDrive.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="38Wq5TX25PITxHR4Cz0C8t4l6w9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PrimesTestDrive.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/huxenbit/Schreibtisch/CodeLx/Java1/IntelliJ Projects/Erathostenes/src/Main.java&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f614497e-7cac-40e5-8a6d-09b41e7ce854" name="Changes" comment="" />
+      <created>1768925494378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768925494378</updated>
+      <workItem from="1768925498412" duration="201000" />
+      <workItem from="1768932262548" duration="5037000" />
+      <workItem from="1768937321187" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
