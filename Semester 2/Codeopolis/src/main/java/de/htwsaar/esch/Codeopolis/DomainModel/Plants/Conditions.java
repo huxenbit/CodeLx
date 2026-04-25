@@ -113,6 +113,9 @@ public class Conditions {
 		float averageTemperatureSummer = random.nextFloat() * 30.0f; // generates a random float value between 0.0 (inclusive) and 30.0 (exclusive)
 		float averageTemperatureWinter = random.nextFloat() * 20.0f - 10.0f; // generates a random float value between -10.0 (inclusive) and 10.0 (exclusive)
 
+		/**
+		 * Generating random events from City.runTurn()-method
+		 */
 		boolean drought = random.nextFloat() > 0.8;
 		boolean fusarium = random.nextFloat() > 0.8;
 		boolean leafDrought = random.nextFloat() > 0.8;

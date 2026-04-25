@@ -124,7 +124,7 @@ public class Game extends GameEntity{
 			this.state = GameState.GAMEOVER;
 		}
 
-		if (this.state != GameState.GAMEOVER) {
+		if (this.state != GameState.GAMEOVER) { //Rekursion
 			gameLoop();
 		}
 	}
