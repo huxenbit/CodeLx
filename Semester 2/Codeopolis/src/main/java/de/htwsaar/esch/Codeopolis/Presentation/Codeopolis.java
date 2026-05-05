@@ -11,9 +11,8 @@ public class Codeopolis {
      * @param args The command line arguments.
      */
 	public static void main(String[] args) {
-		UserInterface userInterface= new Dialog();
+		UserInterface userInterface = new Dialog();
 		userInterface.start();
-
 	}
 
 }

@@ -9,19 +9,17 @@ import java.io.Serializable;
  */
 public class Silo implements Serializable{
     private Harvest[] stock;
-    private final int capacity;
-    private int fillLevel;
+    Status status;
     private int stockIndex = -1;
 
     /**
      * Constructs a Silo object with the specified initial capacity.
      *
-     * @param initialCapacity The initial capacity of the silo.
+     * @param capacity The initial capacity of the silo.
      */
     public Silo(int capacity) {
-        this.capacity = capacity;
+        status = new Status(capacity);
         this.stock = new Harvest[10];
-        this.fillLevel = 0;
     }
     
     /**
@@ -33,8 +31,8 @@ public class Silo implements Serializable{
      * @param other The Silo object to copy.
      */
     public Silo(Silo other) {
-        this.capacity = other.capacity;
-        this.fillLevel = other.fillLevel;
+        status = new Status(other.status.capacity);
+        status.fillLevel = other.status.fillLevel;
         this.stockIndex = other.stockIndex;
 
         this.stock = new Harvest[other.stock.length];
@@ -51,12 +49,12 @@ public class Silo implements Serializable{
      */
     public Harvest store(Harvest harvest) {
     	 // Check if the grain type matches the existing grain in the silo
-        if (fillLevel > 0 && stock[0].getGrainType() != harvest.getGrainType()) {
+        if (status.fillLevel > 0 && stock[0].getGrainType() != harvest.getGrainType()) {
             throw new IllegalArgumentException("The grain type of the given Harvest does not match the grain type of the silo");
         }
         
         // Check if there is enough space in the silo
-        if (fillLevel >= capacity) {
+        if (status.fillLevel >= status.capacity) {
             return harvest; // The silo is already full, cannot be stored
         }
         
@@ -64,13 +62,13 @@ public class Silo implements Serializable{
             extendStock();
         }
         
-        if(fillLevel < capacity) {
+        if(status.fillLevel < status.capacity) {
 	        // Check if the entire harvest can be stored
-	        int remainingCapacity = this.capacity - this.fillLevel;
+	        int remainingCapacity = status.capacity - status.fillLevel;
 	        if(harvest.getAmount() <= remainingCapacity) {
 	        	this.stockIndex++;
 	        	this.stock[this.stockIndex] = harvest;
-	        	this.fillLevel += harvest.getAmount();
+                status.fillLevel += harvest.getAmount();
 	        	return null;
 	        }
 	        else {
@@ -78,7 +76,7 @@ public class Silo implements Serializable{
 	            Harvest remainingHarvest = harvest.split(remainingCapacity);
 	            this.stockIndex++;
 	            stock[this.stockIndex] = remainingHarvest; // Store the remaining harvest in the current depot
-	            this.fillLevel += remainingHarvest.getAmount();
+                status.fillLevel += remainingHarvest.getAmount();
 	            return harvest; // Return the surplus amount
 	        }
         }
@@ -105,7 +103,7 @@ public class Silo implements Serializable{
                 stock[i] = null; 
             }
             stockIndex = -1;
-            fillLevel = 0;
+            status.fillLevel = 0;
             return removedHarvests;
         }
     }
@@ -114,7 +112,7 @@ public class Silo implements Serializable{
      * Extends the capacity of the stock array.
      */
     private void extendStock() {
-        int newCapacity = capacity * 2;
+        int newCapacity = status.capacity * 2;
         Harvest[] newStock = new Harvest[newCapacity];
         for (int i = 0; i < stock.length; i++) {
             newStock[i] = stock[i];
@@ -148,7 +146,7 @@ public class Silo implements Serializable{
                 i--; // Check the same index again, as a new harvest may have been moved here
             }
         }
-        this.fillLevel -= takenAmount;
+        status.fillLevel -= takenAmount;
         return takenAmount;
     }
 
@@ -158,7 +156,7 @@ public class Silo implements Serializable{
      * @return The number of harvests currently stored in the silo.
      */
     public int getFillLevel() {
-    	return this.fillLevel;
+    	return status.fillLevel;
     }
 
     /**
@@ -167,7 +165,7 @@ public class Silo implements Serializable{
      * @return The maximum number of harvests the silo can store.
      */
     public int getCapacity() {
-        return capacity;
+        return status.capacity;
     }
 
     /**
@@ -177,7 +175,7 @@ public class Silo implements Serializable{
      */
     public Game.GrainType getGrainType() {
         // Assuming each silo stores only one type of grain, we can retrieve the grain type from the first stored harvest
-        if (fillLevel > 0 && stock[0] != null) {
+        if (status.fillLevel > 0 && stock[0] != null) {
             return stock[0].getGrainType();
         } 
         else {
@@ -206,8 +204,30 @@ public class Silo implements Serializable{
             Harvest currentHarvest = stock[i];
             totalDecayedAmount += currentHarvest.decay(currentYear);
         }
-        fillLevel -= totalDecayedAmount;
+        status.fillLevel -= totalDecayedAmount;
         return totalDecayedAmount;
+    }
+
+    public class Status {
+        private int capacity;
+        private int fillLevel;
+
+        private Status(int capacity) {
+            this.capacity = capacity;
+            this.fillLevel = 0;
+        }
+
+        public int getFillLevel() {
+            return fillLevel;
+        }
+
+        public int getCapacity() {
+            return capacity;
+        }
+    }
+    
+    public Status getStatus(int capacity) {
+        return new Status(capacity);
     }
 }
 

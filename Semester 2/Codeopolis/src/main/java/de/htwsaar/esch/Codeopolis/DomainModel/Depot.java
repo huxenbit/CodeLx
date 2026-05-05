@@ -1,10 +1,12 @@
 package de.htwsaar.esch.Codeopolis.DomainModel;
 
+import java.util.NoSuchElementException;
 import de.htwsaar.esch.Codeopolis.DomainModel.Harvest.*;
 import java.text.DecimalFormat;
 
 public class Depot {
     private Silo[] silos;
+    DepotIterator dI;
 
     /**
      * Constructs a Depot object with the specified number of silos and capacity per silo.
@@ -12,13 +14,14 @@ public class Depot {
      * @param numberOfSilos    The number of silos in the depot.
      * @param capacityPerSilo  The capacity per silo.
      */
+
     public Depot(int numberOfSilos, int capacityPerSilo) {
         this.silos = new Silo[numberOfSilos];
         for (int i = 0; i < numberOfSilos; i++) {
             this.silos[i] = new Silo(capacityPerSilo);
         }
     }
-    
+
     /**
      * Constructs a Depot object with the specified array of silos.
      * Each silo in the array is deeply copied to ensure that the Depot has its own separate instances.
@@ -45,10 +48,11 @@ public class Depot {
      */
     public int getFillLevel(Game.GrainType grainType) {
         int totalFillLevel = 0;
-        for (Silo silo : silos) {
-            if (silo.getGrainType() == grainType) {
-                totalFillLevel += silo.getFillLevel();
-            }
+        DepotIterator it = getDepotIterator(grainType);
+
+        while (it.hasNext()) {
+            Silo.Status status = it.next();
+            totalFillLevel += status.getFillLevel(); // falls vorhanden
         }
         return totalFillLevel;
     }
@@ -92,11 +96,19 @@ public class Depot {
      */
     public int getCapacity(Game.GrainType grainType) {
         int totalCapacity = 0;
+        DepotIterator it = getDepotIterator(grainType);
+
+        while (it.hasNext()) {
+            totalCapacity += it.next().getCapacity();
+        }
+
+        // zusätzlich leere Silos berücksichtigen (grainType == null)
         for (Silo silo : silos) {
-            if (silo.getGrainType() == grainType || silo.getGrainType() == null) {
+            if (silo.getGrainType() == null) {
                 totalCapacity += silo.getCapacity();
             }
         }
+
         return totalCapacity;
     }
 
@@ -272,13 +284,13 @@ public class Depot {
 	 * 
 	 * @return The total capacity of the storage system.
 	 */
-	public int totalCapacity() {
-		int totalCapacity = 0;
-		for(int i=0; i<this.silos.length; i++) {
-			totalCapacity += this.silos[i].getCapacity();
-		}
-		return totalCapacity;
-	}
+    public int totalCapacity() {
+        int totalCapacity = 0;
+        for (int i = 0; i < this.silos.length; i++) {
+            totalCapacity += this.silos[i].getCapacity();
+        }
+        return totalCapacity;
+    }
 
 	/**
 	 * Retrieves the total amount of grain categorized by grain type.
@@ -347,4 +359,58 @@ public class Depot {
 	    return builder.toString();
 	}
 
+    private class DepotIterator implements Iterator {
+
+        private Game.GrainType grainType;
+        private int index;
+
+        public DepotIterator(Game.GrainType grainType) {
+            this.grainType = grainType;
+            this.index = 0;
+        }
+
+        @Override
+        public boolean hasNext() {
+            for (int i = index; i < silos.length; i++) {
+                if (silos[i].getGrainType() == grainType) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        @Override
+        public Silo.Status next() {
+            while (index < silos.length) {
+                if (silos[index].getGrainType() == grainType) {
+                    return silos[index].getStatus(index++);
+                }
+                index++;
+            }
+            throw new NoSuchElementException();
+        }
+    }
+
+    public interface Iterator {
+        /**
+         * Checks if there are further objects available for iteration.
+         *
+         * @return {@code true} if more objects are available; {@code false} otherwise.
+         */
+
+        boolean hasNext();
+
+        /**
+         * Returns the next {@link Silo.Status} object in the iteration.
+         * This method should only be called if {@code hasNext()} returns {@code true}.
+         *
+         * @return The next { @link Silo . Status } object .
+         * @throws NoSuchElementException if no more elements are available.
+         */
+        Silo.Status next();
+    }
+
+    public DepotIterator getDepotIterator(Game.GrainType grainType) {
+        return new DepotIterator(grainType);
+    }
 }
