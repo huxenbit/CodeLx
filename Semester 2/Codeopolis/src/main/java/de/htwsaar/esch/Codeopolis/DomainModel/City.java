@@ -48,7 +48,7 @@ public class City extends GameEntity {
         this.fortune = new Random();
         
         this.acres = cityState.getAcres();
-        this.planted = new Grain[Game.GrainType.values().length];
+        this.planted = new Grain[GrainType.values().length];
         this.residents = cityState.getResidents();
         this.year = cityState.getYear();
 
@@ -58,14 +58,14 @@ public class City extends GameEntity {
     
     private void setupCity()
     {
-    	this.depot = new Depot(Game.GrainType.values().length, this.config.getSiloCapacity());
-    	this.planted = new Grain[Game.GrainType.values().length];
-    	this.depot.store(Harvest.createHarvest(Game.GrainType.BARLEY, this.config.getInitialBushels(Game.GrainType.BARLEY.ordinal()), this.year));
-    	this.depot.store(Harvest.createHarvest(Game.GrainType.CORN, this.config.getInitialBushels(Game.GrainType.CORN.ordinal()), this.year));
-    	this.depot.store(Harvest.createHarvest(Game.GrainType.MILLET, this.config.getInitialBushels(Game.GrainType.MILLET.ordinal()), this.year));
-    	this.depot.store(Harvest.createHarvest(Game.GrainType.RICE, this.config.getInitialBushels(Game.GrainType.RICE.ordinal()), this.year));
-    	this.depot.store(Harvest.createHarvest(Game.GrainType.RYE, this.config.getInitialBushels(Game.GrainType.RYE.ordinal()), this.year));
-    	this.depot.store(Harvest.createHarvest(Game.GrainType.WHEAT, this.config.getInitialBushels(Game.GrainType.WHEAT.ordinal()), this.year));
+    	this.depot = new Depot(GrainType.values().length, this.config.getSiloCapacity());
+    	this.planted = new Grain[GrainType.values().length];
+    	this.depot.store(Harvest.createHarvest(GrainType.BARLEY, this.config.getInitialBushels(GrainType.BARLEY.ordinal()), this.year));
+    	this.depot.store(Harvest.createHarvest(GrainType.CORN, this.config.getInitialBushels(GrainType.CORN.ordinal()), this.year));
+    	this.depot.store(Harvest.createHarvest(GrainType.MILLET, this.config.getInitialBushels(GrainType.MILLET.ordinal()), this.year));
+    	this.depot.store(Harvest.createHarvest(GrainType.RICE, this.config.getInitialBushels(GrainType.RICE.ordinal()), this.year));
+    	this.depot.store(Harvest.createHarvest(GrainType.RYE, this.config.getInitialBushels(GrainType.RYE.ordinal()), this.year));
+    	this.depot.store(Harvest.createHarvest(GrainType.WHEAT, this.config.getInitialBushels(GrainType.WHEAT.ordinal()), this.year));
     	
     	this.acres = config.getInitialAcres();
     	this.residents = config.getInitialResidents();
@@ -75,8 +75,7 @@ public class City extends GameEntity {
      * Expands the capacity of the depot in the game by the specified additional capacity.
      * This method delegates the expansion operation to the underlying Depot object.
      *
-     * @param additionalCapacity The additional capacity to be added to the depot.
-     * @see Depot#expand(int)
+     * @param numberOfSilos The additional capacity to be added to the depot.
      */
     public void expandDepot(int numberOfSilos, int capacityPerSilo) {
     	this.depot.expand(numberOfSilos, capacityPerSilo);
@@ -206,11 +205,11 @@ public class City extends GameEntity {
 	 * @return A new Harvest object with an equal distribution of grain.
 	 */
     private Harvest[] buildNewEquallyDistributedHarvest(int amount) {
-    	int partition = amount / Game.GrainType.values().length;
-        int remainder = amount % Game.GrainType.values().length;
-        Harvest[] harvests = new Harvest[Game.GrainType.values().length];
+    	int partition = amount / GrainType.values().length;
+        int remainder = amount % GrainType.values().length;
+        Harvest[] harvests = new Harvest[GrainType.values().length];
 
-        for (Game.GrainType grainType : Game.GrainType.values()) {
+        for (GrainType grainType : GrainType.values()) {
             int bushels = partition;
             if (remainder > 0) {
                 bushels++;
@@ -247,10 +246,10 @@ public class City extends GameEntity {
 			this.residents = Integer.MAX_VALUE;
 
 		//Calculation of the harvest:
-		int[] harvested = new int[Game.GrainType.values().length];
+		int[] harvested = new int[GrainType.values().length];
 		Grain.Conditions thisYearsConditions = Grain.Conditions.generateRandomConditions();
 		
-		for(int i = 0; i< Game.GrainType.values().length; i++) {
+		for(int i = 0; i< GrainType.values().length; i++) {
 			if(this.planted[i] != null) {
 				this.planted[i].grow(thisYearsConditions);
 				if(thisYearsConditions.isDrought())
@@ -270,12 +269,12 @@ public class City extends GameEntity {
 				harvested[i] = this.planted[i].harvest();	
 			}
 		}		
-		Harvest[] thisYearsHarvest = new Harvest[] {Harvest.createHarvest(Game.GrainType.BARLEY, harvested[Game.GrainType.BARLEY.ordinal()], this.year), 
-		        Harvest.createHarvest(Game.GrainType.CORN, harvested[Game.GrainType.CORN.ordinal()], this.year), 
-		        Harvest.createHarvest(Game.GrainType.MILLET, harvested[Game.GrainType.MILLET.ordinal()], this.year), 
-		        Harvest.createHarvest(Game.GrainType.RICE, harvested[Game.GrainType.RICE.ordinal()], this.year), 
-		        Harvest.createHarvest(Game.GrainType.RYE, harvested[Game.GrainType.RYE.ordinal()], this.year), 
-		        Harvest.createHarvest(Game.GrainType.WHEAT, harvested[Game.GrainType.WHEAT.ordinal()], this.year)};
+		Harvest[] thisYearsHarvest = new Harvest[] {Harvest.createHarvest(GrainType.BARLEY, harvested[GrainType.BARLEY.ordinal()], this.year),
+		        Harvest.createHarvest(GrainType.CORN, harvested[GrainType.CORN.ordinal()], this.year),
+		        Harvest.createHarvest(GrainType.MILLET, harvested[GrainType.MILLET.ordinal()], this.year),
+		        Harvest.createHarvest(GrainType.RICE, harvested[GrainType.RICE.ordinal()], this.year),
+		        Harvest.createHarvest(GrainType.RYE, harvested[GrainType.RYE.ordinal()], this.year),
+		        Harvest.createHarvest(GrainType.WHEAT, harvested[GrainType.WHEAT.ordinal()], this.year)};
 		
 		for(Harvest h : thisYearsHarvest)
 			this.depot.store(h); //Issue #40
@@ -335,12 +334,12 @@ public class City extends GameEntity {
 	 */
 	public void IDKFA() {
 	    this.depot.expand(6, Integer.MAX_VALUE);
-	    this.depot.store(Harvest.createHarvest(Game.GrainType.BARLEY, 100000, this.year)); 
-	    this.depot.store(Harvest.createHarvest(Game.GrainType.CORN, 100000, this.year)); 
-	    this.depot.store(Harvest.createHarvest(Game.GrainType.MILLET, 100000, this.year));
-	    this.depot.store(Harvest.createHarvest(Game.GrainType.RICE, 100000, this.year)); 
-	    this.depot.store(Harvest.createHarvest(Game.GrainType.RYE, 100000, this.year)); 
-	    this.depot.store(Harvest.createHarvest(Game.GrainType.WHEAT, 100000, this.year));
+	    this.depot.store(Harvest.createHarvest(GrainType.BARLEY, 100000, this.year));
+	    this.depot.store(Harvest.createHarvest(GrainType.CORN, 100000, this.year));
+	    this.depot.store(Harvest.createHarvest(GrainType.MILLET, 100000, this.year));
+	    this.depot.store(Harvest.createHarvest(GrainType.RICE, 100000, this.year));
+	    this.depot.store(Harvest.createHarvest(GrainType.RYE, 100000, this.year));
+	    this.depot.store(Harvest.createHarvest(GrainType.WHEAT, 100000, this.year));
 	    this.acres = 1000000;
 	}
 

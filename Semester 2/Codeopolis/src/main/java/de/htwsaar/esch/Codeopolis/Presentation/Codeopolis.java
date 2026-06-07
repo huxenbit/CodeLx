@@ -14,5 +14,4 @@ public class Codeopolis {
 		UserInterface userInterface = new Dialog();
 		userInterface.start();
 	}
-
 }
